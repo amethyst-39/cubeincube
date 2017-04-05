@@ -1,0 +1,68 @@
+# cubeincube
+</--A 3D cube inside another cube using css-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>try3cubeincube</title>
+	<style type="text/css">
+		
+div.stage{
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	width: 300px; height: 300px;
+	-webkit-perspective: 1500px;
+	-webkit-perspective-origin: -300px -300px;
+    	 }
+
+#a{width: 300px; height: 300px;
+   position: absolute;
+   border: 2px solid black;
+   background-color: black;
+   opacity: 0.3;}
+
+ #b{width: 200px; height: 200px;
+   position: absolute;
+   top: 50px;
+   left: 50px;
+   border: 2px solid white;
+   background-color: red;
+   opacity: 0.5;}
+
+div.back{}
+div.right{-webkit-transform: rotateY(90deg) translateZ(150px) translateX(-150px);}
+div.left{-webkit-transform: rotateY(90deg) translateZ(-150px) translateX(-150px);}
+div.bottom{-webkit-transform: rotateX(90deg) translateZ(-150px) translateY(150px);}
+div.top{-webkit-transform: rotateX(90deg) translateZ(150px) translateY(150px);}
+div.front{-webkit-transform: translateZ(300px);}
+
+div.backin{-webkit-transform: translateZ(50px);}
+div.rightin{-webkit-transform: rotateY(90deg) translateZ(100px) translateX(-150px);}
+div.leftin{-webkit-transform: rotateY(90deg) translateZ(-100px) translateX(-150px);}
+div.bottomin{-webkit-transform: rotateX(90deg) translateZ(-100px) translateY(150px);}
+div.topin{-webkit-transform: rotateX(90deg) translateZ(100px) translateY(150px);}
+div.frontin{-webkit-transform: translateZ(250px);}
+
+	</style>
+</head>
+<body>
+	<div class="stage">
+	<div id="a"  class="back"></div>
+	<div id="a"  class="right"></div>
+    <div id="a"  class="bottom"></div>
+
+    <div id="b"  class="backin"></div>
+	<div id="b"  class="rightin"></div>
+	<div id="b"  class="leftin"></div>
+	<div id="b"  class="bottomin"></div>
+	<div id="b"  class="topin"></div>
+	<div id="b"  class="frontin"></div>
+
+	<div id="a"  class="left"></div>
+	<div id="a"  class="top"></div>
+	<div id="a"  class="front"></div>
+	
+	</div>
+</body>
+</html>
